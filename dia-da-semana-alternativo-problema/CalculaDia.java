@@ -125,7 +125,7 @@ public class CalculaDia {
         
 
 
-        if(yearRef >= yearObj) { //CASO EM QUE TEM QUE RETROCEDER DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
+        if(yearRef > yearObj) { //CASO EM QUE TEM QUE RETROCEDER DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
             do {
                 //System.out.println("=>YEAR: "+year);
                 if(year == yearObj) {
@@ -173,10 +173,10 @@ public class CalculaDia {
                 year--;
 
             }while(year>=yearObj);
-            //System.out.println("RESULTADO DIA DA SEMANA: "+(dayWeek));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
-            System.exit((dayWeek));
+            //System.out.println("RESULTADO DIA DA SEMANA: "+(dayWeek+1));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
+            System.exit((dayWeek+1));
 
-        }else if(yearRef <= yearObj) { //CASO EM QUE TEM QUE PROGREDIR DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
+        }else if(yearRef < yearObj) { //CASO EM QUE TEM QUE PROGREDIR DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
             do {
                 //System.out.println("=>YEAR: "+year);
                 mFim = 12;
