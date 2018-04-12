@@ -9,6 +9,8 @@ public class CalculaDia {
     public static void main(String[] args) {
 
         // TODO Auto-generated method stub
+
+        //IMPLLEMENTAR REQUISITOS DE RETIRAR ENTRADA E SAIDA PADRAO
         
         int dataDesejada = 0;
         int anoBissexto = 0;
@@ -125,21 +127,21 @@ public class CalculaDia {
 
         if(yearRef >= yearObj) { //CASO EM QUE TEM QUE RETROCEDER DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
             do {
-                System.out.println("=>YEAR: "+year);
+                //System.out.println("=>YEAR: "+year);
                 if(year == yearObj) {
                     mFim = monthObj;
 
                 }
 
                 for (int i = month; i >= mFim; i--) {
-                    System.out.println("==>Month: "+month);
+                    //System.out.println("==>Month: "+month);
 
                     if(year == yearObj && month == mFim) {
                         dFim = dayObj;
                     }
 
                     for (int j = day; j >= dFim; j--) {
-                        System.out.println("====>Day: "+day);
+                        //System.out.println("====>Day: "+day);
                         count++;
                         day--;
 
@@ -171,12 +173,12 @@ public class CalculaDia {
                 year--;
 
             }while(year>=yearObj);
-            //System.out.println("RESULTADO DIA DA SEMANA: "+(dayWeek+1));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
-            System.exit((dayWeek+1));
+            //System.out.println("RESULTADO DIA DA SEMANA: "+(dayWeek));//6-dom 5-sab 4-sex 3-qui 2-qua 1-ter 0-seg
+            System.exit((dayWeek));
 
         }else if(yearRef <= yearObj) { //CASO EM QUE TEM QUE PROGREDIR DA DATA DE REFERENCIA ATÉ A DATA DESEJADA
             do {
-                System.out.println("=>YEAR: "+year);
+                //System.out.println("=>YEAR: "+year);
                 mFim = 12;
                 if(year == yearObj) {
                     mFim = monthObj;
@@ -184,7 +186,7 @@ public class CalculaDia {
                 }
 
                 for (int i = month; i <= mFim; i++) {
-                    System.out.println("==>Month: "+month);
+                    //System.out.println("==>Month: "+month);
 
                     if(year == yearObj && month == mFim) {
                         dFim = dayObj;
@@ -204,7 +206,7 @@ public class CalculaDia {
 
 
                     for (int j = day; j <= dFim; j++) {
-                        System.out.println("====>Day: "+day);
+                        //System.out.println("====>Day: "+day);
                         count++;
                         day++;
 
@@ -216,7 +218,7 @@ public class CalculaDia {
 
                     }
 
-                    System.out.println("===>Count: "+count);
+                    //System.out.println("===>Count: "+count);
                     month++;
 
                     day = 1;
